@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vuli Russell</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- getting google icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- getting font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+
+    <!-- FROM FAVICON GENERATOR -->
+    <link rel="shortcut icon" href="img/favicon-32x32.png">
+
+</head>
+<body>
+    <header>
+
+        <canvas></canvas>
+        <h1>Vuli Russell</h1>     
+        <a href="#nav-header">Find Out More</a>
+        <div class="control">
+            <button type="button">Control The Lines!</button>
+            
+            <div class="flex-container">
+                <hr>
+                <label for="no-lines">Number of Lines</label><input type="range" id="no-lines" min="0" max="100" value="10">
+                <label for="gradient">Gradient of Lines</label><input type="range" id="gradient" min="0" max="10" value="5" step="0.1">
+                <label for="width">Width of Lines</label><input type="range" id="width" min="0" max="10" value="0.2" step="0.05">
+                <label for="base-speed">Speed of Lines</label><input type="range" id="base-speed" min="0" max="0.5" value="0.01" step="0.005">
+                <label for="circle-size">Circle Size</label><input type="range" id="circle-size" min="0" max="10" value="1" step="0.5">
+                <label for="line-color">Line Color</label><input type="color" id="line-color" value="#000000">
+                <label for="circle-color">Circle Color</label><input type="color" id="circle-color" value="#000000">
+                
+            </div>
+        </div>
+         
+        
+    </header>
+    <nav>
+        
+        <div class = "nav-header" id="nav-header">  
+            <i class="material-icons">expand_more</i>
+        </div>
+
+        <ul> 
+            <li><a href="#about-me">About Me</a></li>
+            <li><a href="#course">Course</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <hr>  
+        <a class="anchor" id="about-me"></a>
+        <section>
+            <h2>About Me</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum impedit expedita autem qui quidem delectus. Commodi labore magni odit voluptatibus non recusandae aliquam aliquid dolorum consectetur. Cumque impedit dolore a!</p>
+            <img src="https://picsum.photos/300/300" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum impedit expedita autem qui quidem delectus. Commodi labore magni odit voluptatibus non recusandae aliquam aliquid dolorum consectetur. Cumque impedit dolore a!</p>
+        </section>
+        
+        <hr>
+        
+        <a class="anchor" id="course"></a>
+        <section>
+            <h2>Why I am doing this course</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum impedit expedita autem qui quidem delectus. Commodi labore magni odit voluptatibus non recusandae aliquam aliquid dolorum consectetur. Cumque impedit dolore a!</p>
+        </section>
+
+        <hr>
+
+        <a class="anchor" id="projects"></a>
+        <section>
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Dummy Project A</h3>
+                <div class="flex-container">
+                    <p>This is dummy project A</p>
+                    <img src="https://picsum.photos/299/299" alt="">
+                </div>
+
+            </div>
+
+            <div class="project">
+                <h3>Dummy Project B</h3>
+                <div class="flex-container">
+                    <p>This is dummy project B</p>
+                    <img src="https://picsum.photos/301/301" alt="">
+                </div>
+
+            </div>
+        </section> 
+
+        <hr>
+
+        <a class="anchor" id="contact"></a>
+        <footer>
+            <h2>Contact Me</h2>
+            <div>
+                <i class="material-icons">email</i>
+                <a href="mailto:vulirussell@gmail.com">vulirussell@gmail.com</a>  
+            </div>
+            <br>
+            <div>
+                <i class="material-icons">phone</i>
+                <p>+44 7807342555</p>
+            </div>
+            <hr>
+
+        </footer>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
