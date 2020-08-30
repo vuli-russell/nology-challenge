@@ -1,4 +1,3 @@
-
 // elements for navigation
 const menuIcon = document.querySelector(".nav-header i");
 const menu = document.querySelector("body nav");
@@ -30,19 +29,19 @@ canvas.height = window.innerHeight;
 
 
 //resize canvas
-window.addEventListener("resize",()=>{
+window.addEventListener("resize",function(){
     canvas.width = document.body.clientWidth;
     canvas.height = window.innerHeight;
 });
 
 //canvas controls
 //Closing this box has a delay idk why
-controlTitle.addEventListener("click",()=>{
+controlTitle.addEventListener("click",function(){
     if(controlSettings.style.maxHeight){
         controlSettings.style.maxHeight = null;
         controlSettings.style.maxWidth = null;
     }else{
-        controlSettings.style.maxHeight=`${controlSettings.scrollHeight}px`;
+        controlSettings.style.maxHeight=controlSettings.scrollHeight+"px";
         controlSettings.style.maxWidth="100vw";
     }   
 })
@@ -59,7 +58,7 @@ let circleColor;
 let baseSpeed;
 let radius;
 
-const getInputs = () =>{
+const getInputs = function(){
     numLines = noLinesInput.value;
     color = lineColorInput.value;
     gradient = gradientInput.value;
@@ -72,7 +71,7 @@ const getInputs = () =>{
 
 const c = canvas.getContext("2d");
 
-const drawLine = (x1,y1,x2,y2,color,width,shadowColor) =>{
+const drawLine = function(x1,y1,x2,y2,color,width,shadowColor){
     c.beginPath();
     c.moveTo(x1,y1);
     c.lineTo(x2,y2);
@@ -96,8 +95,8 @@ const drawLine = (x1,y1,x2,y2,color,width,shadowColor) =>{
     c.fill();
 }
 
-const findDistance = (x1,y1,x2,y2,x0,y0)=>{
-    return Math.abs((y2-y1)*x0-(x2-x1)*y0+x2*y1-y2*x1)/Math.sqrt(((y2-y1)**2)+((x2-x1)**2));
+const findDistance = function(x1,y1,x2,y2,x0,y0){
+    return Math.abs((y2-y1)*x0-(x2-x1)*y0+x2*y1-y2*x1)/Math.sqrt((Math.pow((y2-y1),2))+(Math.pow((x2-x1),2)));
 }
 
 
@@ -114,7 +113,7 @@ class Line {
         this.shadowColor = shadowColor;
     }
 
-    update = () =>{
+    update() {
         this.x = this.a * Math.cos(this.theta) + this.k;
         this.y = this.b * Math.sin(this.theta) + this.h;
         
@@ -157,7 +156,7 @@ const generateLines = () =>{
     }
 }
 
-const animate=()=>{
+const animate=function(){
     if(lines.length!=numLines){
         generateLines();
     }
@@ -173,7 +172,7 @@ animate();
 
 
 // menu stuff
-menu.addEventListener("click",()=>{
+menu.addEventListener("click",function(){
     if(navItems.style.maxHeight){
         navItems.style.maxHeight = null;
         menuIcon.innerHTML = "expand_more";
@@ -189,7 +188,7 @@ menu.addEventListener("click",()=>{
 //max height set to 2x or padding deosnt appear on image??
 
 projectHeaders.forEach((header,index) => {
-    header.addEventListener("click", ()=>{
+    header.addEventListener("click", function(){
         if(projectDetails[index].style.maxHeight){
             projectDetails[index].style.maxHeight = null;
             projectDetails[index].style.padding = "0px";

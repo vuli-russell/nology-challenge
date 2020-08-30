@@ -215,6 +215,7 @@ footer div{
 
 @media screen and (min-width: 700px){
     body{
+        width: 80vw;
         width: max(80vw,calc(100vw - 200px));
         
         margin: 0;
@@ -225,6 +226,7 @@ footer div{
     }
 
     nav{
+        width: 20vw;
         width: min(20vw,200px);
         position: fixed;
         right: 0px;
