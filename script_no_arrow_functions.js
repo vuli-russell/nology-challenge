@@ -7,13 +7,14 @@ const header = document.querySelector("header");
 //element for canvas
 const canvas = document.querySelector("canvas");
 
-//elements for projects box
-const projectHeaders = document.querySelectorAll("section .project h3");
-const projectDetails = document.querySelectorAll("section .project .flex-container");
+//elements for project cards
+const projectCards = document.querySelectorAll(".project-card");
+
+
 
 //canvas control stuff
 const controlTitle = document.querySelector("header div.control button");
-const controlSettings = document.querySelector("header div.control div.flex-container");
+const controlSettings = document.querySelector("header div.control div.controls-grid-container");
 const noLinesInput = document.getElementById("no-lines");
 const gradientInput = document.getElementById("gradient");
 const widthInput = document.getElementById("width");
@@ -183,19 +184,9 @@ menu.addEventListener("click",function(){
 
 });
 
-
-//project box stuff
-//max height set to 2x or padding deosnt appear on image??
-
-projectHeaders.forEach((header,index) => {
-    header.addEventListener("click", function(){
-        if(projectDetails[index].style.maxHeight){
-            projectDetails[index].style.maxHeight = null;
-            projectDetails[index].style.padding = "0px";
-        }else {
-            projectDetails[index].style.maxHeight = `${2*projectDetails[index].scrollHeight}px`;
-            projectDetails[index].style.padding = "20px";
-        }
+//project card display
+projectCards.forEach(function(card,index){
+    card.addEventListener("click",function(){
+        projectCards[index].classList.toggle("displayed");
     })
-});
-
+})

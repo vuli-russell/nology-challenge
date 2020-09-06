@@ -26,7 +26,7 @@
         <div class="control">
             <button type="button">Control The Lines!</button>
             
-            <div class="flex-container">
+            <div class="controls-grid-container">
                 <hr>
                 <label for="no-lines">Number of Lines</label><input type="range" id="no-lines" min="0" max="100" value="10">
                 <label for="gradient">Gradient of Lines</label><input type="range" id="gradient" min="0" max="10" value="5" step="0.1">
@@ -78,23 +78,52 @@
         <a class="anchor" id="projects"></a>
         <section>
             <h2>Projects</h2>
-            <div class="project">
-                <h3>Dummy Project A</h3>
-                <div class="flex-container">
-                    <p>This is dummy project A</p>
-                    <img src="https://picsum.photos/299/299" alt="">
+            
+            <div class="projects-flex-container">
+                <div class="project-card" style="background-image: url('https://picsum.photos/700/700')">
+                    <h3>Dummy Project A</h3>
+                    <div class="project-details">
+                        <p>
+                        This is an engaging description of dummy project A. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam repellendus nostrum facilis consectetur. Eaque recusandae doloremque dolore iste, ipsum repudiandae, similique vitae odio debitis, sapiente fugiat animi dolorum neque! Voluptatem.</p>
+                        <hr>
+                        <h4>Tech Used</h4>
+                        <ul>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>Javascript</li>
+                        </ul>
+                    </div>
                 </div>
 
-            </div>
-
-            <div class="project">
-                <h3>Dummy Project B</h3>
-                <div class="flex-container">
-                    <p>This is dummy project B</p>
-                    <img src="https://picsum.photos/301/301" alt="">
+                <div class="project-card" style="background-image: url('https://picsum.photos/699/699')">
+                    <h3>Dummy Project B</h3>
+                    <div class="project-details">
+                        <p>This is dummy project B</p>
+                    </div>
                 </div>
 
+                <div class="project-card" style="background-image: url('https://picsum.photos/698/698')">
+                    <h3>Dummy Project C</h3>
+                    <div class="project-details">
+                        <p>This is dummy project C</p>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background-image: url('https://picsum.photos/697/697')">
+                    <h3>Dummy Project D</h3>
+                    <div class="project-details">
+                        <p>This is dummy project D</p>
+                    </div>
+                </div>
+
+                <div class="project-card" style="background-image: url('https://picsum.photos/696/696')">
+                    <h3>Dummy Project E</h3>
+                    <div class="project-details">
+                        <p>This is dummy project E</p>
+                    </div>
+                </div>
             </div>
+            
         </section> 
 
         <hr>
