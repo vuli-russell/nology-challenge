@@ -4,7 +4,14 @@ body{
     font-family: quicksand,Verdana, Geneva, Tahoma, sans-serif;
     background: #F2F2F2;
     box-sizing: border-box;
-    
+    /* hide scrollbar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+/* remove scrollbar webkit browsers*/
+body::-webkit-scrollbar{
+    display: none; 
 }
 
 *{
@@ -27,7 +34,6 @@ header h1{
     font-size: 100px;
     color: #F26A4B;
 }
-
 
 header a{
     padding: 10px 0px;
@@ -135,10 +141,11 @@ a.anchor{
 section{
     text-align: center;
     margin: auto;
+
 }
 
 h2{
-    font-size: 40px;
+    font-size: 35px;
     margin: 20px;
     color: #f26a4b;
 }
@@ -147,11 +154,14 @@ section p{
     margin: 20px 20vw;
     color: #8c493a;
     text-align: justify;
+    font-size: 20px;
+    line-height: 1.5em;
 }
 
 hr{
     width: 80%;
 }
+
 
 .projects-flex-container{
     display: flex;
@@ -201,6 +211,7 @@ section .project-card{
 
 .project-card .project-details p{
     color: #262526;
+    margin:0;
 }
 
 @supports (backdrop-filter: blur(10px)){
@@ -208,10 +219,6 @@ section .project-card{
         background-color: rgba(242, 242, 242, 0.418);
         backdrop-filter: blur(10px);
     }
-}
-
-.project-card .project-details p{
-    margin:0;
 }
 
 .project-card .project-details h4{
@@ -324,6 +331,12 @@ footer div{
         margin: 20px 5vw;
     }
 
+    section p{
+        margin: 20px 20vw;
+        color: #8c493a;
+        text-align: center;
+    }
+
 }
 
 
@@ -338,4 +351,4 @@ footer div{
         margin: 20px 20px;
     }
 }
-        
+
